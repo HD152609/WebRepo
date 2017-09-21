@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<script>
-	function sum() {
-		var num = document.getElementById("num").value;
-		var sum = 0;
-		for(var i=1; i<=num; i++){
-			sum += i;
+<meta charset="utf-8">
+<title>íƒœê·¸ì‹¤ìŠµ</title>
+	<script>
+		function sum(){
+			var num = document.getElementById("num").value;
+			var sum = 0;
+
+			for(var i = 1; i <= num; i++){
+				sum += i;
+			}
+
+			document.getElementById("result").innerHTML = "1ë¶€í„° " + num + "ê¹Œì§€ì˜ í•©ì€ " + sum + "ìž…ë‹ˆë‹¤.";
 		}
-		document.getElementById("result").innerHTML="1ºÎÅÍ " + num + "±îÁöÀÇ ÇÕÀº " + sum + "ÀÔ´Ï´Ù.";
-	}
-</script>
+	</script>
+
 </head>
 <body>
-	<input type="text" id="num" size="5" />
-	<input type="button" onclick="sum();" value="°è»ê">
+	<input type="text" id="num"/>
+	<input type="button" onclick="sum()" value="ê³„ì‚°"/>
 	<p id="result"></p>
 </body>
 </html>

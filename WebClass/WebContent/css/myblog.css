@@ -1,0 +1,21 @@
+div.input-group-container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+h1.h1{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.carousel {
+  padding-top: 50px;
+  left: 20%;
+  width: 800px;
+  height: auto;
+}
+
+img.d-block{
+  width: 800px;
+  height: 450px;
+}

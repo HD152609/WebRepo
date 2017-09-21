@@ -2,40 +2,46 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
-<script>
-function check(){
-	if(document.getElementById("age").value >= 16 && document.getElementById("age").value <= 69){
-		if(document.getElementById("male").checked){
-			if(document.getElementById("weight").value >= 50){
-				document.getElementById("result").innerHTML = "현혈 가능"				
+<title>태그실습</title>
+	<script>
+		function check(){
+			var age, weight;
+			
+			age = Number(document.getElementById("age").value);
+			weight = Number(document.getElementById("weight").value);
+			
+			if(document.getElementById("male").checked){
+				if(age < 16 || age > 69)
+					document.getElementById("console").innerHTML = "연령부적합";
+				if(age >= 16 && age <= 69 && weight<50)
+					document.getElementById("console").innerHTML = "체중 미달";
+				if(age >= 16 && age <= 69 && weight>=50)
+					document.getElementById("console").innerHTML = "헌혈 가능 ";
 			}
-			else{
-				document.getElementById("result").innerHTML = "체중 미달"				
+			
+			
+			else if(document.getElementById("female").checked){
+				if(age < 16 || age > 69)
+					document.getElementById("console").innerHTML = "연령부적합";
+				if(age >= 16 && age <= 69 && weight<45)
+					document.getElementById("console").innerHTML = "체중 미달";
+				if(age >= 16 && age <= 69 && weight>=45)
+					document.getElementById("console").innerHTML = "헌혈 가능 ";
+
 			}
 		}
-		else {
-			if(document.getElementById("weight").value >= 45){
-				document.getElementById("result").innerHTML = "현혈 가능"				
-			}
-			else{
-				document.getElementById("result").innerHTML = "체중 미달"				
-			}
-		}
-	}
-	else {
-		document.getElementById("result").innerHTML = "연령 부적합"
-	}
-}
-</script>
+	
+	</script>
+	
 </head>
 <body>
-	<h2>헌혈 조건 체크</h2>
-	나이 : <input type="text" id="age" size="5" /> 세 <br>
-	성별 : 남자 <input type="radio" name="gender" id="male" checked>
-	여자 	<input type="radio" name="gender" id="female"> <br>
-	몸무게 : <input type="text" id="weight" size="5" /> kg <br> <br>
-	<input type="button" onclick="check();" value="헌혈 조건 체크"> <br>
-	<p id="result"></p>
+	<h1>헌혈 조건</h1>
+	
+	나이 : <input type="text" id="age" size="5"/> 세<br>
+	성별 : 남성<input type="radio" id="male" name="gender" size="5" checked/> 
+		  여성<input type="radio" id="female" name="gender" size="5"/><br>
+	몸무게 : <input type="text" id="weight" size="5"/><br>
+	<input type="button" onclick="check();" value="헌혈 조건 체크"/>
+	<p id="console"></p>
 </body>
 </html>
