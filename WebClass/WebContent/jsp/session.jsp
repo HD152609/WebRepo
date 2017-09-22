@@ -19,5 +19,9 @@ session.setAttribute("cnt",++cnt);
 
 %>
 <h1>cnt : <%= cnt %></h1>
+<br>
+<%= request.getHeader("Cookie") %>
+
+
 </body>
 </html>
