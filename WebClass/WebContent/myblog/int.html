@@ -10,11 +10,12 @@
  
  <script src="../js/menu.js">
 
+ 
  </script>
  
- 
- 
  <title>김주찬 블로그</title>
+ 
+ 
   </head>
   <body>
   
@@ -30,7 +31,7 @@
         <a class="nav-link disabled" href="int.html">소개</a>
       </li>
       <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
-        <a class="nav-link disabled" href="dream.html">꿈<span class="sr-only"></span></a>
+        <a class="nav-link disabled" href="dream.html">꿈<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
         <a class="nav-link disabled" href="hobby.html">취미</a>
@@ -66,8 +67,56 @@
        </div>
      </div>
    </div>
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E32U-s3tHSM" allowfullscreen></iframe>
+
+  <div id="accordion" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+ 		자기 소개
+ 		        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body"><!-- 자기 소개 내용 -->
+		<div class="card" style="width: 30rem;">
+  <img class="card-img-top" src="../image/photo.jpg"  alt="자기 사진">
+  <div class="card-body">
+    <h4 class="card-title">김주찬</h4>
+    <p class="card-text" >1.경기도 군포시 재궁동 화성목화아파트 거주<br>
+    2.금정 중학교 졸업<br>
+    3.한국 디지털 미디어 고등학교 재학 중.<br>
+    </p>
+  </div>
+</div>
+		
+		  </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        학교 소개
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+      
+      <div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="../image/dimigo.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">한국 디지털 미디어 고등학교</h4>
+    <p class="card-text">안산에 위치한 특성화 고등학교!
+     <a href="http://dimigo.hs.kr" class="btn btn-primary">디미고 사이트</a>
+    </p>
+  </div>
+</div>
+        </div>
+    </div>
+</div>
 </div>
 
     <!-- Optional JavaScript -->
@@ -77,7 +126,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
  
    <script src="../js/login.js">
-  
+    
    </script>
+  
   </body>
 </html>
